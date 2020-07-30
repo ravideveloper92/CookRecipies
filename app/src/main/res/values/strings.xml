@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Cookbook</string>
+    <string name="title_home">Quick Meal</string>
+    <string name="title_categories">Categories</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="post_categories_error">An error occured while loading the categories</string>
+    <string name="retry">Retry</string>
+    <string name="search">Search</string>
+    <string name="hint_main_ingredient">Enter your main ingredient</string>
+    <string name="post_meals_error">An error occured while loading the meals</string>
+    <string name="uknown_error">Oops! Looks like something went wrong. Please try again.</string>
+    <string name="network_error">Internet Connection Error</string>
+    <string name="transitionName">MealsList</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="preparations">Preparations</string>
+    <string name="recipe_photo_description">Recipe Photo</string>
+    <string name="trending_now">Trending Now</string>
+    <string name="cuisine">Cuisines</string>
+    <string name="no_meals_found_please_refine_your_search">No Meals found. Please refine your search</string>
+</resources>

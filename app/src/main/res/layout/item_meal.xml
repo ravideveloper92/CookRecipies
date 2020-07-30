@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.ravi.cookbook.ui.meals.MealViewModel" />
+    </data>
+    <com.chauthai.swipereveallayout.SwipeRevealLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="6dp"
+        app:mode="same_level"
+        app:dragEdge="right"
+        >
+
+        <RelativeLayout
+            android:id="@+id/delete_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffcc0000">
+
+            <ImageView
+                android:id="@+id/txtDelete"
+                android:layout_width="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_delete"
+                android:onClick="@{(view) -> viewModel.onClickRemoveMeal(view, viewModel)}"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:id="@+id/txtSearch"
+                android:layout_below="@+id/txtDelete"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search"
+                android:onClick="@{(view) -> viewModel.onClickSearchMeal(view, viewModel.getStrYoutube())}"
+                android:layout_gravity="center"/>
+
+        </RelativeLayout>
+
+<!--
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:background="@android:color/black"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtDelete"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_red_light"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:text="DELETE"
+                android:onClick="@{(view) -> viewModel.onClickRemoveMeal(view, viewModel)}"
+                android:textColor="#ffffff" />
+
+        </RelativeLayout>
+-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.ravi.cookbook.utils.ResizableImageView
+                android:id="@+id/category_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:foreground="@drawable/image_gradient"
+                app:imageUrl="@{viewModel.getStrMealThumb()}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/category_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:textSize="17sp"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                app:mutableText="@{viewModel.getStrMeal()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.chauthai.swipereveallayout.SwipeRevealLayout>
+
+</layout>

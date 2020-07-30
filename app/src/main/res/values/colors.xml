@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D81B60</color>
+    <color name="colorPrimaryLight">#DDD81B60</color>
+    <color name="colorPrimaryDark">#A1053E</color>
+    <color name="colorAccent">#DDD81B60</color>
+    <color name="photoTint">#6a000000</color>
+    <color name="photoTintPressed">#20ff4081</color>
+</resources>
