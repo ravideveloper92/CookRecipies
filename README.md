@@ -3,7 +3,7 @@ Exploring MVVM with CookBook sample android application which displays list of m
 
 ![Homepage](/image/homepage.png) ![Categories](/image/category.jpg) ![Meals](/image/meals.jpg) ![Meal Details](/image/meal_details.jpg)
 # APIs
-TheMealDb (https://themealdb.com/)
+ http://recipesapi.herokuapp.com/
 
 # Libraries
 - Kotlin - Kotlin programing language
